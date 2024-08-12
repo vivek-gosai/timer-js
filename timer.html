@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Add CSS here */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Oswald",
+                sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #43504f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            word-spacing: 0.5em;
+            font-weight: 400;
+            transform: scale(1, 1.5);
+            color: whitesmoke;
+            opacity: 0.8;
+            font-size: 45px;
+            margin-bottom: 150px;
+            border-top: 2px solid whitesmoke;
+            border-bottom: 2px solid whitesmoke;
+
+        }
+
+        .time-blocks {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+
+            background: radial-gradient(circle farthest-corner at 150px 150px, #2f3435 60%, #34393c 50%);
+        }
+
+        .side-text {
+            position: absolute;
+            bottom: -30px;
+            left: 0px;
+            transform: rotate(270deg);
+            transform-origin: 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            color: #667977;
+        }
+
+        .time-text {
+            font-weight: 500;
+            transform: scaleY(1.8);
+            font-size: 55px;
+            color: #ca2f55;
+        }
+
+        .btn-1,
+        .btn-2,
+        .btn-3 {
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px 20px;
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-block;
+            color: white;
+            background-color: green;
+        }
+
+        .btn-1,
+        .btn-2,
+        .btn-3 {
+            margin: 30px 30px;
+            background-color: #667977;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Make Coundown & Quotes application using JS</h1>
+    <div class="time-blocks">
+        <div class="block"><span class="side-text">HOURS</span><span class="time-text" id="hours"></span></div>
+        <div class="block"><span class="side-text">MINUTES</span><span class="time-text" id="min"></span></div>
+        <div class="block"><span class="side-text">SECONDS</span><span class="time-text" id="sec"></span></div>
+    </div>
+    <div class="btn">
+        <a href="#" class="btn-1" onclick="start()">Start</a>
+        <a href="#" class="btn-2" onclick="stop()">Stop</a>
+        <a href="#" class="btn-3" onclick="reset()">Reset</a>
+    </div>
+
+    <script src="custom.js"></script>
+
+</body>
+
+</html>
